@@ -24,21 +24,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
 
-    <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
-
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
 
@@ -66,6 +51,11 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#aboutme"
+                >About Me</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#projects"
@@ -99,18 +89,19 @@
           class="rounded-circle"
           draggable="false"
           id="profilepic"
+          src="images/profilepic.jpg"
         />
       </div>
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
           Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
-          <span id="name"></span>!
+          <span id="name">Johnny Tran</span>!
         </h4>
       </div>
       <div class="row mx-auto">
         <h5 class="h5 mx-auto text-center text-opacity-75 text-primary">
-          Information Science & Technology Student at Temple University
+          Information Science & Technology Senior at Temple University
         </h5>
       </div>
       <div class="row my-4 language-wrapper row-gap-5 col-gap-1 gap-lg-2">
@@ -124,23 +115,6 @@
         </div>
         <div class="col text-center">
           <img
-            src="images/angular.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Angular"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/typescript.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="TypeScript"
-          />
-        </div>
-
-        <div class="col text-center">
-          <img
             src="images/csharp.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
@@ -149,18 +123,19 @@
         </div>
         <div class="col text-center">
           <img
-            src="images/node.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Node.js"
-          />
-        </div>
-        <div class="col text-center">
-          <img
             src="images/java.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Java"
+          />
+        </div>
+
+        <div class="col text-center">
+          <img
+            src="images/javascript.png"
+            data-bs-toggle="tooltip"
+            data-placement="top"
+            title="Javascript"
           />
         </div>
 
@@ -182,21 +157,79 @@
         </div>
         <div class="col text-center">
           <img
-            src="images/mongodb.jpg"
+            src="images/oracle.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="MongoDB"
+            title="Oracle"
           />
         </div>
-      </div>
 
+        <div class="col text-center">
+          <img
+            src="images/html.png"
+            data-bs-toggle="tooltip"
+            data-placement="top"
+            title="HTML"
+          />
+        </div>
+
+        <div class="col text-center">
+          <img
+            src="images/css.png"
+            data-bs-toggle="tooltip"
+            data-placement="top"
+            title="CSS"
+          />
+        </div>
+
+
+      </div>
       <div class="row mt-3 mt-lg-5 next">
-        <a href="#projects" class="col"
+        <a href="#aboutme" class="col"
           ><iconify-icon
             icon="material-symbols:arrow-circle-down"
             class="arrow-next"
           ></iconify-icon
         ></a>
+      </div>
+
+      <div
+        class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
+        id="aboutme"
+      >
+    
+        <div class="row mx-auto">
+          <h4 class="h1 font-weight-bold mx-auto text-center">About Me</h4>
+        </div>
+        <div class="row mx-auto">
+          <div class="row w-100 mb-4">
+            <h3 class="text-justify bg-primary text-white">
+            I am an enthusiastic, self-motivated, reliable, responsible and hard working person. 
+            I am a mature team worker and adaptable to all challenging situations. 
+            I am able to work well both in a team environment as well as using own initiative. 
+            I am able to work well under pressure and adhere to strict deadlines. <br /> <br />
+            On my time off I like to play video games and read manga. <br />
+            I also train muay thai, judo, and brazilian jiu-jitsu.
+            I started training muay thai at the beginning of 2022 and since then I have been 
+            trying to train other martial arts as well.
+            I started judo in my fall semester of 2023 at Temple, I had been wanting to start training 
+            some grappling and this was the perfect opportunity. I have been training judo for around 4 months as of right now 
+            and jiu-jitsu for probably around a month. My training has been slowed down due to my current semester but I am planning 
+            on continuing doing muay thai, judo, and jiu-jitsu once I am done this semester or whenever I have the time. <br /> <br />
+            
+            If we are ever face to face feel free to talk to me about manga and martial arts I would love to have a conversation or
+            give recommendations.
+            </h3>
+          </div>
+        </div>
+        <div class="row mt-3 next">
+          <a href="#projects" class="col d-flex justify-content-center flex-column align-items-center "
+            ><iconify-icon
+              icon="material-symbols:arrow-circle-down"
+              class="arrow-next"
+            ></iconify-icon
+          ></a>
+        </div>
       </div>
     </div>
     <div
@@ -204,77 +237,77 @@
       id="projects"
     >
       <div class="row mx-auto">
-        <h4 class="h1 font-weight-bold mx-auto text-center">Projects</h4>
+        <h4 class="h1 font-weight-bold mx-auto text-center ">Projects</h4>
       </div>
       <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4">
-          I've worked on some neat things.
+        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4 ">
+          These are the projects I have done.
         </h5>
       </div>
       <div class="row w-100">
-        <h5>Inspiro for Esperanza</h5>
+        <h5>Python Discord Bot (April 2021 - May 2021)</h5>
+      </div>
+      <div class="row w-100 mb-4 bg-primary text-white">
+        <p class="text-justify">
+          Created a discord bot that would browse and share reddit posts, correctly embedding
+          videos and images into the discord text channel. The bot was created and programmed in
+          Python and was controlled with commands that could be issued in discord. Reddit API was
+          used to get the posts, images, and videos to be displayed. This was created due to discord
+          at the time not being able to embed reddit links into the text channel correctly at the time.
+          Unfortunately this bot has become obselete due to many changes to both reddit and discord since then.
+          Discord as of 2024 has been able to embed reddit content correctly and has for the most part
+          made discord bots unecessary. Also, reddit has now begun charging money for access to Reddit API usage.
+        </p>
+      </div>
+      <div class="row w-100">
+        <h5>Library Database (Oct 2022 - Nov 2022)</h5>
       </div>
       <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus
-          nisi in neque blandit auctor. Vestibulum pellentesque fringilla nulla
-          quis sagittis. Donec id erat sodales, fringilla est non, vestibulum
-          tellus. Suspendisse potenti. Fusce et dolor blandit, tincidunt eros
-          non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus
-          tincidunt purus. Suspendisse imperdiet massa nec sem dictum luctus.
-          Vestibulum at porta lectus, sed faucibus libero.
+        <p class="text-justify bg-primary text-white">
+          Designed a functional database in Oracle intended for library use.
+          The Database would be used by libraries to keep track of borrowed books.
+          Created ER diagram and relational schema for the database.
+          Created necessary and functional database tables for the database.
         </p>
       </div>
       <div class="row w-100">
-        <h5>Work From Home Pinterest</h5>
-      </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non
-          ex dapibus finibus. Nulla facilisi. Integer eu libero lorem.
-          Pellentesque eget pretium ligula. Donec finibus nibh sed leo dapibus
-          imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit
-          dolor, ac mollis risus. Vestibulum commodo turpis nulla, bibendum
-          varius urna dictum porta.
-        </p>
+        <h5>Temple Capstone Project Intake System (Jan 2024 - Current)</h5>
       </div>
       <div class="row w-100">
-        <h5>Query Dating Site</h5>
-      </div>
-      <div class="row w-100">
-        <p class="text-justify">
-          Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra
-          odio ut egestas. Nullam facilisis condimentum consequat. Integer arcu
-          nibh, ullamcorper non fringilla quis, tempus sit amet turpis. Proin ac
-          gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor
-          sit amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a
-          maximus vel, fringilla eu nisl. Pellentesque sed quam non urna dapibus
-          porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-          efficitur at.
+        <p class="text-justify bg-primary text-white">
+          Currently in the process of planning the creation and implementation of
+          a system to streamline the process of getting capstone projects for Temple's 
+          Information Systems Analysis and Design course. Temple currently has an inefficient
+          system for having clients propose projects for the students in the course to complete.
+          This system would streamline the process making it more efficient and user friendly for
+          both the clients and administrators of the course itself.
         </p>
       </div>
-      <div class="row mt-3 next">
-        <a href="#courses" class="col"
-          ><iconify-icon
-            icon="material-symbols:arrow-circle-down"
-            class="arrow-next"
-          ></iconify-icon
-        ></a>
-      </div>
+      
     </div>
+    <br />
+    <div class="row mt-3 next">
+      <a href="#courses" class="col d-flex justify-content-center flex-column align-items-center "
+        ><iconify-icon
+          icon="material-symbols:arrow-circle-down"
+          class="arrow-next"
+        ></iconify-icon
+      ></a>
+    </div>
+
     <div
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
       id="courses"
     >
       <div class="row mx-auto">
-        <h4 class="h1 font-weight-bold mx-auto text-center">Courses</h4>
+        <h4 class="h1 font-weight-bold mx-auto text-center ">Courses</h4>
       </div>
       <div class="row mx-auto mb-4">
         <h5 class="h5 mx-auto text-center text-primary text-opacity-75">
-          Not as tasty as a main course, but close.
+          Courses I have completed.
         </h5>
       </div>
-      <div class="row w-100 justify-content-center my-3 gap-4">
+      <div class="row w-100 justify-content-center my-3 gap-4 ">
         <a
           class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
           type="button"
@@ -323,16 +356,72 @@
         >
           <h5 class="m-0">Database Management Systems</h5>
         </a>
-        <div class="row mt-5 next justify-content-center align-items-center">
-          <a href="#contact" class="text-center"
-            ><iconify-icon
-              icon="material-symbols:arrow-circle-down"
-              class="arrow-next"
-            ></iconify-icon
-          ></a>
-        </div>
+
+        <a
+          class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+          type="button"
+          href="https://bulletin.temple.edu/search/?P=CIS%201068"
+          target="_blank"
+        >
+          <h5 class="m-0">Program Design and Abstraction</h5>
+        </a>
+
+        <a
+          class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+          type="button"
+          href="https://bulletin.temple.edu/search/?P=CIS%202168"
+          target="_blank"
+        >
+          <h5 class="m-0">Data Structures</h5>
+        </a>
+
+        <a
+          class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+          type="button"
+          href="https://bulletin.temple.edu/search/?P=CIS%202229"
+          target="_blank"
+        >
+          <h5 class="m-0">Architecture, Operating Systems and Networking</h5>
+        </a>
+
+        <a
+          class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+          type="button"
+          href="https://bulletin.temple.edu/search/?P=CIS%203441"
+          target="_blank"
+        >
+          <h5 class="m-0">Software Security</h5>
+        </a>
+
+        <a
+          class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+          type="button"
+          href="https://bulletin.temple.edu/search/?P=CIS%203775"
+          target="_blank"
+        >
+          <h5 class="m-0">Information Technology Project Management</h5>
+        </a>
+
+        <a
+          class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+          type="button"
+          href="https://bulletin.temple.edu/search/?P=CIS%203605"
+          target="_blank"
+        >
+          <h5 class="m-0">Introduction to Digital Forensics</h5>
+        </a>
       </div>
     </div>
+
+    <div class="row mt-5 next justify-content-center align-items-center">
+      <a href="#contact" class="text-center"
+        ><iconify-icon
+          icon="material-symbols:arrow-circle-down"
+          class="arrow-next"
+        ></iconify-icon
+      ></a>
+    </div>
+
     <div
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
       id="contact"
@@ -344,11 +433,11 @@
       </div>
       <div class="row mx-auto">
         <h5 class="h5 mx-auto text-opacity-75 text-primary text-center">
-          I don't bite.
+          Reach me here.
         </h5>
       </div>
       <div class="row my-4 contact-wrapper gap-3">
-        <a href="mailto:johndoe@gmail.com" class="col text-black">
+        <a href="mailto:tun45633@temple.edu" class="col text-black">
           <iconify-icon
             icon="logos:google-gmail"
             width="60"
@@ -358,7 +447,7 @@
             title="Email"
           ></iconify-icon>
         </a>
-        <a href="https://www.linkedin.com/in/johndoe/" class="col"
+        <a href="https://www.linkedin.com/in/johnny-tran-66247b250/" class="col"
           ><iconify-icon
             icon="skill-icons:linkedin"
             width="60"
@@ -368,7 +457,7 @@
             title="LinkedIn"
           ></iconify-icon>
         </a>
-        <a href="https://github.com/johndoe" class="col"
+        <a href="https://github.com/jtrangit" class="col"
           ><iconify-icon
             icon="skill-icons:github-dark"
             width="60"
